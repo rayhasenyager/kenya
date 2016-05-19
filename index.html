@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Kenya Livestock Populations</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <link href='css/styles.css' rel='stylesheet' />
+
+</head>
+
+<body>
+
+    
+
+    <div id='map'></div>
+    <div id='side-panel'>
+        <h1>Livestock populations in Kenya</h1>
+        <p>Discovering where livestock are most concentrated will aid the firm in developing regional sales areas. The map is one factor among many to develop a sales plan in Kenya. Other areas that should be investigated and mapped are urban development, threat zones, and competitors.</p>
+        <h2> About the map</h2>
+        <p>The map displays by each county rings, scaled to the population, of each livestock catogry. The counties are also displayed and are categorized nased on density. Hovering the mouse over each green ring will display an information window with County name, population, and specific density.</p>
+        <h2> About the data</h2>
+        <p>The data was mined from the Kenya Open Data (https://opendata.go.ke/). Density was calculated using each county's area in kilometers.</p>
+    </div>
+    <div id="legend">
+        <h3>Livestock per county</h3>
+        <p class="cattle"><span style='background:#6813D2;'></span>
+            <label> Cattle</label>
+        </p>
+        <p class="goats"><span style='background:#DAA520;'></span>
+            <label> Goats</label>
+        </p>
+        <p class="sheep"><span style='background:#008000;'></span>
+            <label> Sheep</label>
+        </p>
+        <h4>Counties (livestock per sq km):</h4>
+        <p class="zero"><span class="square" style='background:#ca641c;'></span>
+            <label> 21.41 - 55.99</label>
+        </p>
+        <p class="one"><span class="square" style='background:#9d4e15;'></span>
+            <label> 71.76 - 95.5</label>
+        </p>
+        <p class="two"><span class="square" style='background:#874312;'></span>
+            <label> 137.84 - 190.62</label>
+        </p>
+        <p class="three"><span class="square" style='background:#5a2d0c;'></span>
+            <label> 195.8 - 263.93</label>
+        </p>
+        <p class="four"><span class="square" style='background:#2d1606;'></span>
+            <label> 296.34 - 362.96</label>
+        </p>
+        <small>Source: <a href="https://opendata.go.ke/">Kenya Open Data</a></small>
+    </div>
+
+    <div id="info">
+        <p>County: <span></span></p>
+        <p class="cattle">Cattle <span></span>: <span></span></p>
+        <p class="goats">Goats <span></span>: <span></span></p>
+        <p class="sheep">Sheep <span></span>: <span></span></p>
+        <p class="density">Density <span></span>: <span></span></p>
+    </div>
+
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+    <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/1.0.1/simple_statistics.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>
